@@ -8,14 +8,14 @@ void main() {
   runApp(
     GetMaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.orange,
+        primarySwatch: Colors.purple,
       ),
       debugShowCheckedModeBanner: false,
       title: "Getx Demo",
-      initialRoute: AppPages.INITIAL,
+      initialRoute: AppPages.LOGIN,
       getPages: AppPages.routes,
 
-           // 404未知页面
+      // 404未知页面
       unknownRoute: AppPages.unknownRoute,
     ),
   );
