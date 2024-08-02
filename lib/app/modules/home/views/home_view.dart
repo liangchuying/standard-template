@@ -33,7 +33,7 @@ class HomeView extends GetView<HomeController> {
         children: listPage,
       ),
       bottomNavigationBar: NavigationBars(),
-      drawer: Drewer(),
+      drawer: Drawer(child: DrewerPages(), width: Get.width * 2 / 3,),
     );
   }
 }
