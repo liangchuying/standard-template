@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../modules/home/components/navigation_bar.dart';
+import '../components/drawer/drawer_view.dart';
 import '../controllers/home_controller.dart';
 
 import '../../../modules/home/components/module_one/index_view.dart';
@@ -32,6 +33,7 @@ class HomeView extends GetView<HomeController> {
         children: listPage,
       ),
       bottomNavigationBar: NavigationBars(),
+      drawer: Drewer(),
     );
   }
 }

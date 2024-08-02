@@ -45,13 +45,13 @@ class _NavigationBarsState extends State<NavigationBars> {
                   activeIcon: NavIcon(icon: FontAwesomeIcons.solidComment),
                   label: '信息'),
               BottomNavigationBarItem(
-                  icon: NavIcon(icon: FontAwesomeIcons.heart),
-                  activeIcon: NavIcon(icon: FontAwesomeIcons.solidHeart),
-                  label: ''),
+                  icon: NavIcon(icon: FontAwesomeIcons.bookmark),
+                  activeIcon: NavIcon(icon: FontAwesomeIcons.solidBookmark),
+                  label: '收藏'),
               BottomNavigationBarItem(
                   icon: NavIcon(icon: FontAwesomeIcons.file),
                   activeIcon: NavIcon(icon: FontAwesomeIcons.solidFile),
-                  label: ''),
+                  label: '文件'),
               BottomNavigationBarItem(
                   icon: NavIcon(icon: FontAwesomeIcons.user),
                   activeIcon: NavIcon(icon: FontAwesomeIcons.userLarge),
