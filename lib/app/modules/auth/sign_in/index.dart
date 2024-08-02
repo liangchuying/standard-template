@@ -11,9 +11,9 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: Appbars(title: "登录",),
-      body: Center(child: Text('login'),),
+    return Scaffold(
+      appBar: AppBars(title: "登录").build(),
+      body: const Center(child: Text('login'),),
     );
   }
 }

@@ -12,7 +12,7 @@ void main() {
       ),
       debugShowCheckedModeBanner: false,
       title: "Getx Demo",
-      initialRoute: AppPages.LOGIN,
+      initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
 
       // 404未知页面

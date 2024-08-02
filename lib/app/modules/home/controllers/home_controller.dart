@@ -1,11 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   //TODO: Implement HomeController
 
-  final count = 0.obs;
+  RxInt Activate = 1.obs;
+  var pageController;
+
   @override
   void onInit() {
+    pageController = PageController(initialPage: Activate.value);
     super.onInit();
   }
 
@@ -19,5 +23,9 @@ class HomeController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  void SetActivate(int value) {
+    // pageController.animateToPage(value, duration: Duration(milliseconds: 500), curve: Curves.easeInCirc);
+    pageController.jumpToPage(value);
+    Activate.value = value;
+  }
 }

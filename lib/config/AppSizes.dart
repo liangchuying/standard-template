@@ -23,4 +23,7 @@ class AppSizes {
   static const double size20 = 20.0;
   static const double size22 = 22.0;
   static const double size25 = 25.0;
+  static const double size35 = 35.0;
+
+  static const double NavSize = 28.0;
 }
