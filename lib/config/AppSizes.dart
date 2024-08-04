@@ -18,11 +18,14 @@ class AppSizes {
   static const double maxWidth15 = 15.0;
 
   static const double minSize = 5.0;
+  static const double size8 = 8.0;
   static const double size10 = 10.0;
   static const double size15 = 15.0;
+  static const double size16 = 16.0;
   static const double size20 = 20.0;
   static const double size22 = 22.0;
   static const double size25 = 25.0;
+  static const double size30 = 30.0;
   static const double size35 = 35.0;
 
   static const double NavSize = 28.0;

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -9,6 +11,7 @@ void main() {
     GetMaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.purple,
+            drawerTheme: DrawerThemeData(shape: BorderDirectional())
       ),
       debugShowCheckedModeBanner: false,
       title: "Getx Demo",

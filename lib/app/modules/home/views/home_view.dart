@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../config/AppGlobalConfig.dart';
 import '../../../modules/home/components/navigation_bar.dart';
 import '../components/drawer/drawer_view.dart';
 import '../controllers/home_controller.dart';
@@ -23,6 +24,7 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: controller.scaffoldKey,
       body: PageView(
         controller: controller.pageController,
         physics: const NeverScrollableScrollPhysics(), // 不能拖拽
@@ -33,7 +35,7 @@ class HomeView extends GetView<HomeController> {
         children: listPage,
       ),
       bottomNavigationBar: NavigationBars(),
-      drawer: Drawer(child: DrewerPages(), width: Get.width * 2 / 3,),
+      drawer: Drawer(child: DrewerPages(), width: GlobalConfig.DrawerWidth,),
     );
   }
 }
