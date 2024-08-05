@@ -4,6 +4,7 @@ import 'package:luid/config/AppColors.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../../../config/AppSizes.dart';
+import 'drawerModule.dart';
 import 'drawer_head_menu.dart';
 
 class DrewerPages extends StatefulWidget {
@@ -66,62 +67,28 @@ class _DrewerState extends State<DrewerPages> {
           color: AppColors.notWhite,
           height: 0.1,
         ),
-        ListTile(
-          contentPadding:
-              EdgeInsets.only(left: AppSizes.size16, right: AppSizes.padding10),
-          leading: Icon(
-            Icons.add_reaction,
-            size: 20,
-            color: AppColors.darkgrey,
-          ),
-          iconColor: AppColors.darkgrey,
-          trailing: Icon(
-            Icons.chevron_right,
-            size: 20,
-          ),
-          title: Text(
-            '我的消息',
-          ).textStyle(TextStyle(color: AppColors.darkgrey, fontSize: 14)),
+        DrawerTile(
+          title: '我的消息',
+          icon: Icons.add_reaction,
+          toNamed: '',
         ),
         const Divider(
           color: AppColors.notWhite,
           height: 0.1,
         ).paddingOnly(left: AppSizes.size16),
-        ListTile(
-          contentPadding:
-              EdgeInsets.only(left: AppSizes.size16, right: AppSizes.padding10),
-          leading: Icon(
-            Icons.add_reaction,
-            size: 20,
-          ),
-          iconColor: AppColors.darkgrey,
-          trailing: Icon(
-            Icons.chevron_right,
-            size: 20,
-          ),
-          title: Text(
-            '我的相册',
-          ).textStyle(TextStyle(color: AppColors.darkgrey, fontSize: 14)),
+        DrawerTile(
+          title: '我的相册',
+          icon: Icons.add_reaction,
+          toNamed: '',
         ),
         const Divider(
           color: AppColors.notWhite,
           height: 0.1,
         ).paddingOnly(left: AppSizes.size16),
-        ListTile(
-          contentPadding:
-              EdgeInsets.only(left: AppSizes.size16, right: AppSizes.padding10),
-          leading: Icon(
-            Icons.add_reaction,
-            size: 20,
-          ),
-          iconColor: AppColors.darkgrey,
-          trailing: Icon(
-            Icons.chevron_right,
-            size: 20,
-          ),
-          title: Text(
-            '我的文件',
-          ).textStyle(TextStyle(color: AppColors.darkgrey, fontSize: 14)),
+        DrawerTile(
+          title: '我的文件',
+          icon: Icons.add_reaction,
+          toNamed: '',
         ),
       ].toColumn(),
     );
@@ -139,41 +106,22 @@ class _DrewerState extends State<DrewerPages> {
           color: AppColors.notWhite,
           height: 0.1,
         ),
-        ListTile(
-          contentPadding:
-              EdgeInsets.only(left: AppSizes.size16, right: AppSizes.padding10),
-          leading: Icon(
-            Icons.add_reaction,
-            size: 20,
-          ),
-          iconColor: AppColors.darkgrey,
-          trailing: Icon(
-            Icons.chevron_right,
-            size: 20,
-          ),
-          title: Text(
-            '切换账号',
-          ).textStyle(TextStyle(color: AppColors.darkgrey, fontSize: 14)),
+        DrawerTile(
+          title: '切换账号',
+          icon: Icons.add_reaction,
+          toNamed: '',
         ),
         const Divider(
           color: AppColors.notWhite,
           height: 0.1,
         ).paddingOnly(left: AppSizes.size16),
-        ListTile(
-          contentPadding:
-              EdgeInsets.only(left: AppSizes.size16, right: AppSizes.padding10),
-          leading: Icon(
-            Icons.add_reaction,
-            size: 20,
-            color: AppColors.mainRedAccent,
-          ),
-          trailing: Icon(
-            Icons.chevron_right,
-            size: 20,
-          ),
-          title: Text(
-            '退出登录/关闭',
-          ).textStyle(TextStyle(color: AppColors.mainRedAccent, fontSize: 14)),
+        DrawerTile(
+          title: '退出登录/关闭',
+          icon: Icons.add_reaction,
+          titleColor: AppColors.mainRedAccent,
+          iconColor: AppColors.mainRedAccent,
+          color: AppColors.mainRedAccent,
+          toNamed: '',
         ),
       ].toColumn(),
     );
