@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:luid/config/AppColors.dart';
 
 import '../../../../config/AppGlobalConfig.dart';
 import '../../../modules/home/components/navigation_bar.dart';
@@ -35,7 +36,7 @@ class HomeView extends GetView<HomeController> {
         children: listPage,
       ),
       bottomNavigationBar: NavigationBars(),
-      drawer: Drawer(child: DrewerPages(), width: GlobalConfig.DrawerWidth,),
+      drawer: Drawer(child: DrewerPages(), width: GlobalConfig.DrawerWidth, backgroundColor: AppColors.scaffoldBackgroundColor,),
     );
   }
 }

@@ -1,6 +1,6 @@
 class DrawerCard {
   final bool IsRightIcon;
   final String title;
-
-  DrawerCard({this.IsRightIcon = true, required this.title});
+  final String? toName;
+  DrawerCard( {this.IsRightIcon = true, required this.title, this.toName,});
 }
