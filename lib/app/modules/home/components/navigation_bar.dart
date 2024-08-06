@@ -39,6 +39,7 @@ class _NavigationBarsState extends State<NavigationBars> {
             selectedItemColor: AppColors.purple,
             currentIndex: controller.Activate.value,
             onTap: (index) => controller.SetActivate(index),
+            backgroundColor: Colors.transparent, /// 背景透明做高斯模糊
             items: const [
               BottomNavigationBarItem(
                   icon: NavIcon(icon: FontAwesomeIcons.comment),

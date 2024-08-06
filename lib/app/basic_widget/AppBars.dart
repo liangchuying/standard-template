@@ -56,12 +56,12 @@ class BlurBar {
   BlurBar(
       {required this.child,
       this.padding,
-      this.sigmaX = 10,
-      this.sigmaY = 20,
+      this.sigmaX = 40,
+      this.sigmaY = 40,
       this.hasColor = true});
 
   Widget build() {
-    return ClipRRect(
+    return ClipRect(
       //背景模糊化
       child: BackdropFilter(
         filter: ImageFilter.blur(
