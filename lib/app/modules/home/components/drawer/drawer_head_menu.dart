@@ -5,6 +5,7 @@ import 'package:luid/extension/string_extension.dart';
 import 'package:styled_widget/styled_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../config/AppSizes.dart';
+import '../mobile_scanner/mobile_scanner.dart';
 
 class HeadMenu extends StatelessWidget {
   const HeadMenu({super.key});
@@ -37,6 +38,7 @@ class HeadMenu extends StatelessWidget {
         width: AppSizes.size25,
       ).gestures(onTap: () {
         print("扫一扫");
+        Get.to(MobileScannerPage());
       })
     ].toRow(crossAxisAlignment: CrossAxisAlignment.center);
   }
