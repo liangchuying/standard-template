@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:styled_widget/styled_widget.dart';
 
-class SweepView extends StatefulWidget {
-  const SweepView({super.key});
+import '../../../../../config/AppColors.dart';
+
+class MobileScannerPage extends StatefulWidget {
+  const MobileScannerPage({super.key});
 
   @override
-  State<SweepView> createState() => _SweepViewState();
+  State<MobileScannerPage> createState() => _MobileScannerPageState();
 }
 
-class _SweepViewState extends State<SweepView> {
+class _MobileScannerPageState extends State<MobileScannerPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Text("MobileScannerPage"),
+    );
   }
 }
