@@ -11,7 +11,7 @@ class moduleThree extends GetView<HomeController> {
     return Scaffold(
       appBar: AppBars(
         title: 'moduleThree',
-        leading: Icon(FontAwesomeIcons.bars).gestures(onTap: () {
+        leading: Icon(FontAwesomeIcons.bars,).gestures(onTap: () {
           controller.openDrawer();
         }),
       ).build(),

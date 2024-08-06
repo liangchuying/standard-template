@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:luid/config/AppColors.dart';
 import 'package:styled_widget/styled_widget.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../config/AppSizes.dart';
 import 'drawerModule.dart';
@@ -69,7 +70,7 @@ class _DrewerState extends State<DrewerPages> {
         ),
         DrawerTile(
           title: '我的消息',
-          icon: Icons.add_reaction,
+          icon: FontAwesomeIcons.envelopeOpen,
           toNamed: '',
         ),
         const Divider(
@@ -78,7 +79,7 @@ class _DrewerState extends State<DrewerPages> {
         ).paddingOnly(left: AppSizes.size16),
         DrawerTile(
           title: '我的相册',
-          icon: Icons.add_reaction,
+          icon: FontAwesomeIcons.image,
           toNamed: '',
         ),
         const Divider(
@@ -87,7 +88,7 @@ class _DrewerState extends State<DrewerPages> {
         ).paddingOnly(left: AppSizes.size16),
         DrawerTile(
           title: '我的文件',
-          icon: Icons.add_reaction,
+          icon: FontAwesomeIcons.floppyDisk,
           toNamed: '',
         ),
       ].toColumn(),
@@ -108,7 +109,7 @@ class _DrewerState extends State<DrewerPages> {
         ),
         DrawerTile(
           title: '切换账号',
-          icon: Icons.add_reaction,
+          icon: FontAwesomeIcons.arrowRightArrowLeft,
           toNamed: '',
         ),
         const Divider(
@@ -117,7 +118,7 @@ class _DrewerState extends State<DrewerPages> {
         ).paddingOnly(left: AppSizes.size16),
         DrawerTile(
           title: '退出登录/关闭',
-          icon: Icons.add_reaction,
+          icon: FontAwesomeIcons.powerOff ,
           titleColor: AppColors.mainRedAccent,
           iconColor: AppColors.mainRedAccent,
           color: AppColors.mainRedAccent,
