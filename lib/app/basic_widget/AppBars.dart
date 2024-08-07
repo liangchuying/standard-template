@@ -16,6 +16,7 @@ class AppBars {
   Widget? leading;
   bool isLeading;
   GestureTapCallback? leadingTap;
+  Color? icooColor;
 
   AppBars(
       {this.title,
@@ -25,7 +26,8 @@ class AppBars {
       this.backgroundColor = AppColors.mainBackground,
       this.leading,
       this.isLeading = true,
-      this.leadingTap});
+      this.leadingTap,
+      this.icooColor});
 
   // PreferredSize
   PreferredSizeWidget? build() {
@@ -34,7 +36,10 @@ class AppBars {
       backgroundColor: backgroundColor,
       leading: isLeading
           ? leading ??
-              const Icon(FontAwesomeIcons.chevronLeft).gestures(onTap: leadingTap)
+              Icon(
+                FontAwesomeIcons.chevronLeft,
+                color: icooColor,
+              ).gestures(onTap: leadingTap)
           : null,
       actions: actions,
       title: Text(title!).textStyle(TextStyle(fontSize: size)),
