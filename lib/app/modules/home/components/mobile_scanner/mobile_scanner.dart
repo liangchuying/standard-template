@@ -75,11 +75,13 @@ class _MobileScannerPageState extends State<MobileScannerPage> {
                       preferredSize: Size.fromHeight(kToolbarHeight),
                     )),
               ],
-            ).gestures(
-              onScaleUpdate: (ScaleUpdateDetails e) {
-                print('onScaleUpdate${e.scale.clamp(0.0, 1.0)}');
-              },
-            ),
+            ).gestures(onScaleUpdate: (ScaleUpdateDetails e) {
+              double scale = e.scale.clamp(0.0, 2.0);
+              double _previous = (1 - scale) / 100; /// 手速缓慢一百倍
+              _zoomFactor = ((_zoomFactor - _previous)).clamp(0.0, 1.0);
+            }, onScaleEnd: (ScaleEndDetails e) {
+              controller.setZoomScale(_zoomFactor);
+            }),
             bottomNavigationBar: BottomAppBar(
               color: AppColors.black,
               height: 100,
