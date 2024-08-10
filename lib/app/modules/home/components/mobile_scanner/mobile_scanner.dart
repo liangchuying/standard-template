@@ -8,6 +8,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../../../config/AppColors.dart';
+import '../qr_code/qr_code.dart';
 
 class MobileScannerPage extends StatefulWidget {
   const MobileScannerPage({super.key});
@@ -23,8 +24,17 @@ class _MobileScannerPageState extends State<MobileScannerPage> {
   late MobileScannerController controller;
 
   /// 处理扫码响应结果
-  void _handleBarcode(BarcodeCapture barcodes) {
-    if (mounted) {}
+  void _handleBarcode(BarcodeCapture capture) {
+    if (mounted) {
+      if(capture.raw != null) {
+        final List<Barcode> barcodes = capture.barcodes;;
+        for (final barcode in barcodes) {
+          debugPrint('二维码找到！${barcode.rawValue}');
+          Get.snackbar('有数据', barcode.rawValue!);
+        }
+        controller.stop();
+      }
+    }
   }
 
   @override
@@ -57,7 +67,11 @@ class _MobileScannerPageState extends State<MobileScannerPage> {
                   errorBuilder: (context, error, child) {
                     return ScannerErrorWidget(error: error);
                   },
-                  onDetect: _handleBarcode,
+                  onDetect: (BarcodeCapture capture) {
+                    _handleBarcode(capture);
+                    Navigator.pop(context); // 退出当前页面
+                    // Get.back();
+                  },
                 ),
                 // 从下往上渲染 优先渲染
                 Positioned(
@@ -89,6 +103,9 @@ class _MobileScannerPageState extends State<MobileScannerPage> {
                 ScannerBottomBar(
                   title: "我的二维码",
                   icon: FontAwesomeIcons.qrcode,
+                  onPressed: () {
+                    Get.to(QrCode());
+                  },
                 ),
                 Spacer(),
                 AnalyzeImageFromGalleryButton(
