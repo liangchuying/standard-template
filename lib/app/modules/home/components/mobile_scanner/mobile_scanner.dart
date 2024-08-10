@@ -20,20 +20,19 @@ class MobileScannerPage extends StatefulWidget {
 class _MobileScannerPageState extends State<MobileScannerPage> {
   /// 扫码图像的百分比
   double _zoomFactor = 0.0;
-
+  Barcode? _barcode;
   late MobileScannerController controller;
 
   /// 处理扫码响应结果
   void _handleBarcode(BarcodeCapture capture) {
     if (mounted) {
-      if(capture.raw != null) {
-        final List<Barcode> barcodes = capture.barcodes;;
-        for (final barcode in barcodes) {
-          debugPrint('二维码找到！${barcode.rawValue}');
-          Get.snackbar('有数据', barcode.rawValue!);
+        _barcode = capture.barcodes.firstOrNull;
+        if(_barcode?.displayValue == null) {
+
         }
-        controller.stop();
-      }
+        else {
+          
+        }
     }
   }
 
