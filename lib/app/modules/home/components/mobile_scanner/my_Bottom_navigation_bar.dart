@@ -3,22 +3,22 @@ import 'package:styled_widget/styled_widget.dart';
 
 import '../../../../../config/AppColors.dart';
 
-class ScannerBottomBar extends StatelessWidget {
+class MyBottomNavigationBar extends StatelessWidget {
   final String? title;
   final IconData? icon;
   final Color? iconColor;
   final VoidCallback? onPressed;
-
-  const ScannerBottomBar(
-      {super.key, this.title, this.icon, this.iconColor, this.onPressed});
+  final Color backgroundColor;
+  const MyBottomNavigationBar(
+      {super.key, this.title, this.icon, this.iconColor, this.onPressed, this.backgroundColor = AppColors.text333333});
 
   @override
   Widget build(BuildContext context) {
     return [
       ClipOval(
         child: Container(
-          padding: EdgeInsets.all(16),
-          color: AppColors.text333333,
+          padding: const EdgeInsets.all(16),
+          color: backgroundColor,
           child: Icon(
             icon,
             color: AppColors.white,
@@ -26,7 +26,7 @@ class ScannerBottomBar extends StatelessWidget {
           ),
         ),
       ).gestures(onTap: onPressed),
-      Text(title!).textStyle(TextStyle(
+      Text(title!).textStyle(const TextStyle(
         fontWeight: FontWeight.w400,
         fontSize: 14,
         letterSpacing: 0.2,
