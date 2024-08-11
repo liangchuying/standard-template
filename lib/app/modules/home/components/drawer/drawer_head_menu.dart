@@ -6,6 +6,7 @@ import 'package:styled_widget/styled_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../config/AppSizes.dart';
 import '../mobile_scanner/mobile_scanner.dart';
+import '../qr_code/qr_code.dart';
 
 class HeadMenu extends StatelessWidget {
   const HeadMenu({super.key});
@@ -30,7 +31,7 @@ class HeadMenu extends StatelessWidget {
               size: AppSizes.size20,
             )
           ]
-              .toRow(crossAxisAlignment: CrossAxisAlignment.center)
+              .toRow(crossAxisAlignment: CrossAxisAlignment.center).gestures(onTap: () => Get.to(QrCodes()))
               .paddingOnly(left: AppSizes.size10)),
       SvgPicture.asset(
         'sweep.svg'.assetsPathHome,
