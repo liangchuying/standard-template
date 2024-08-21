@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:luid/config/AppColors.dart';
 import 'package:luid/extension/string_extension.dart';
 import 'package:styled_widget/styled_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../../../config/AppSizes.dart';
+
+import '../../../../app/config/AppColors.dart';
+import '../../../../app/config/AppSizes.dart';
 import '../mobile_scanner/mobile_scanner.dart';
 import '../qr_code/qr_code.dart';
 

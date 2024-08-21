@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:luid/app/basic_widget/AppBars.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:luid/app/modules/home/controllers/home_controller.dart';
+
 import 'package:styled_widget/styled_widget.dart';
+
+import '../../../basic/AppBars.dart';
+import '../../controllers/home_controller.dart';
 
 class moduleThree extends GetView<HomeController> {
   @override

@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
 
-import '../modules/NotFound/views/404.dart';
-import '../modules/auth/sign_in/index.dart';
-import '../modules/home/bindings/home_binding.dart';
-import '../modules/home/views/home_view.dart';
+import '../../component/auth/sign_in/index.dart';
+import '../../component/home/bindings/home_binding.dart';
+import '../../component/home/views/home_view.dart';
+import '../../component/notFound/views/404.dart';
+
 
 part 'app_routes.dart';
 

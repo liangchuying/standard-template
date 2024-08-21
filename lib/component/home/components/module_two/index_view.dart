@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:luid/app/basic_widget/AppBars.dart';
+
+import '../../../basic/AppBars.dart';
+
 
 class moduleTwo extends GetView {
   @override

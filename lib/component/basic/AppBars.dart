@@ -1,11 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:luid/config/AppColors.dart';
 import 'package:styled_widget/styled_widget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../config/AppSizes.dart';
+import '../../app/config/AppColors.dart';
+import '../../app/config/AppSizes.dart';
+
+
 
 class AppBars {
   String? title;

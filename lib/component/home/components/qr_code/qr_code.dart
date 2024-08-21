@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:luid/app/basic_widget/AppBars.dart';
-import 'package:luid/config/AppColors.dart';
-import 'package:luid/config/AppSizes.dart';
-import 'package:luid/config/AppTheme.dart';
 import 'package:luid/extension/string_extension.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:styled_widget/styled_widget.dart';
 
+import '../../../../app/config/AppColors.dart';
+import '../../../../app/config/AppSizes.dart';
+import '../../../basic/AppBars.dart';
 import '../mobile_scanner/mobile_scanner.dart';
-import '../my_Bottom_navigation_bar.dart';
 
 class QrCodes extends StatefulWidget {
   const QrCodes({super.key});

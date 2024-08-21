@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:luid/app/modules/home/components/my_Bottom_navigation_bar.dart';
+
 import 'package:mobile_scanner/mobile_scanner.dart';
+
+import '../my_Bottom_navigation_bar.dart';
 
 class AnalyzeImageFromGalleryButton extends StatelessWidget {
   const AnalyzeImageFromGalleryButton({required this.controller, super.key});
@@ -48,4 +50,3 @@ class AnalyzeImageFromGalleryButton extends StatelessWidget {
     );
   }
 }
-

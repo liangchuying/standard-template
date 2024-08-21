@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../../../config/AppColors.dart';
+import '../../../app/config/AppColors.dart';
+
+
 
 class MyBottomNavigationBar extends StatelessWidget {
   final String? title;

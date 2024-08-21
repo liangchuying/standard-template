@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:luid/config/AppColors.dart';
 
-import '../../../../config/AppGlobalConfig.dart';
-import '../../../modules/home/components/navigation_bar.dart';
+
+import '../../../app/config/AppColors.dart';
+import '../../../app/config/AppGlobalConfig.dart';
 import '../components/drawer/drawer_view.dart';
+import '../components/module_four/index_view.dart';
+import '../components/module_one/index_view.dart';
+import '../components/module_three/index_view.dart';
+import '../components/module_two/index_view.dart';
+import '../components/navigation_bar.dart';
 import '../controllers/home_controller.dart';
 
-import '../../../modules/home/components/module_one/index_view.dart';
-import '../../../modules/home/components/module_two/index_view.dart';
-import '../../../modules/home/components/module_three/index_view.dart';
-import '../../../modules/home/components/module_four/index_view.dart';
+
 
 class HomeView extends GetView<HomeController> {
   RxList<Widget> listPage = [
@@ -36,7 +38,11 @@ class HomeView extends GetView<HomeController> {
         children: listPage,
       ),
       bottomNavigationBar: NavigationBars(),
-      drawer: Drawer(child: DrewerPages(), width: GlobalConfig.DrawerWidth, backgroundColor: AppColors.scaffoldBackgroundColor,),
+      drawer: Drawer(
+        child: DrewerPages(),
+        width: GlobalConfig.DrawerWidth,
+        backgroundColor: AppColors.scaffoldBackgroundColor,
+      ),
     );
   }
 }

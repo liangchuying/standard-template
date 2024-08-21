@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
-import '../../../../config/AppColors.dart';
-import '../../../../config/AppSizes.dart';
+import '../../../app/config/AppColors.dart';
+import '../../../app/config/AppSizes.dart';
 import '../controllers/home_controller.dart';
 
 class NavigationBars extends StatefulWidget {

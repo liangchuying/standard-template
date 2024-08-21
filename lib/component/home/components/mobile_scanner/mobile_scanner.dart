@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:luid/app/modules/home/components/my_Bottom_navigation_bar.dart';
-import 'package:luid/app/modules/home/components/mobile_scanner/scanner_button_widgets.dart';
-import 'package:luid/app/modules/home/components/mobile_scanner/scanner_error_widget.dart';
+import 'package:luid/component/home/components/mobile_scanner/scanner_button_widgets.dart';
+import 'package:luid/component/home/components/mobile_scanner/scanner_error_widget.dart';
+
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../../../../config/AppColors.dart';
+import '../../../../app/config/AppColors.dart';
+import '../my_Bottom_navigation_bar.dart';
 import '../qr_code/qr_code.dart';
 
 class MobileScannerPage extends StatefulWidget {
@@ -62,17 +63,17 @@ class _MobileScannerPageState extends State<MobileScannerPage> {
             backgroundColor: AppColors.black,
             body: Stack(
               children: [
-                // MobileScanner(
-                //   controller: controller,
-                //   errorBuilder: (context, error, child) {
-                //     return ScannerErrorWidget(error: error);
-                //   },
-                //   onDetect: (BarcodeCapture capture) {
-                //     _handleBarcode(capture);
-                //     Navigator.pop(context); // 退出当前页面
-                //     // Get.back();
-                //   },
-                // ),
+                MobileScanner(
+                  controller: controller,
+                  errorBuilder: (context, error, child) {
+                    return ScannerErrorWidget(error: error);
+                  },
+                  onDetect: (BarcodeCapture capture) {
+                    _handleBarcode(capture);
+                    Navigator.pop(context); // 退出当前页面
+                    // Get.back();
+                  },
+                ),
                 // 从下往上渲染 优先渲染
                 Positioned(
                     top: 0,

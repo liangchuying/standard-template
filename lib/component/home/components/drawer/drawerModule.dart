@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../../../../config/AppColors.dart';
-import '../../../../../config/AppSizes.dart';
+import '../../../../app/config/AppColors.dart';
+import '../../../../app/config/AppSizes.dart';
+
 
 class DrawerTile extends StatelessWidget {
   final String? title;
