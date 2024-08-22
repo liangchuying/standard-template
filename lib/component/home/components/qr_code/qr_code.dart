@@ -7,7 +7,7 @@ import 'package:styled_widget/styled_widget.dart';
 
 import '../../../../app/config/AppColors.dart';
 import '../../../../app/config/AppSizes.dart';
-import '../../../basic/AppBars.dart';
+import '../../../../common/hooks/AppBars.dart';
 import '../mobile_scanner/mobile_scanner.dart';
 
 class QrCodes extends StatefulWidget {

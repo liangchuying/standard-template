@@ -7,8 +7,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../app/config/AppColors.dart';
 import '../../app/config/AppSizes.dart';
 
-
-
 class AppBars {
   String? title;
   bool centerTitle;

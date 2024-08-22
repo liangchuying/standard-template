@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../basic/AppBars.dart';
+import '../../../../common/hooks/AppBars.dart';
 
 
 
