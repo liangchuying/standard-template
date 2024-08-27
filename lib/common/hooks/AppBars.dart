@@ -17,6 +17,7 @@ class AppBars {
   bool isLeading;
   GestureTapCallback? leadingTap;
   Color? icooColor;
+  Color? fontColor;
 
   AppBars(
       {this.title,
@@ -27,7 +28,8 @@ class AppBars {
       this.leading,
       this.isLeading = true,
       this.leadingTap,
-      this.icooColor});
+      this.icooColor,
+      this.fontColor});
 
   // PreferredSize
   PreferredSizeWidget? build() {
@@ -42,7 +44,8 @@ class AppBars {
               ).gestures(onTap: leadingTap)
           : null,
       actions: actions,
-      title: Text(title!).textStyle(TextStyle(fontSize: size)),
+      title:
+          Text(title!).textStyle(TextStyle(fontSize: size, color: fontColor)),
       centerTitle: centerTitle,
     );
   }
